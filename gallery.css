@@ -1,0 +1,75 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color:rgb(88, 35, 88);
+    margin: auto;
+    
+}
+
+.head-wrap {
+    display: flex;
+}
+
+.main-header {
+    height: 100px;
+    width: 100%;
+    background-color:  rgb(250, 132, 77);
+    box-shadow: 0px 5px 5px black;
+    text-align: center;
+    align-self: flex-start;
+    order: -2;
+    
+}
+
+.go-back {
+    margin-top: auto;  
+    color: darkgrey;
+}
+
+.container {
+    margin: 0px auto;
+    margin-top: auto;
+    margin-bottom: 20px;
+    width: 75%;
+    display: flex;
+    background-color: cadetblue;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+img {
+    height: 25%;
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.species {
+    margin: auto;
+    margin-top: 3%;
+}
+
+.bio {
+    margin:  40px;
+}
+
+
+/* MEDIA QUERIES */
+/* 
+@media(min-width: 769px) {
+    body {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .container {
+        width: 200px;
+        height: 200px;
+    }
+} */
