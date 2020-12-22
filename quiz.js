@@ -18,8 +18,8 @@ const answers = [];
 function run() {
 
     // display through the quiz
-    document.querySelector('.counter').innerHTML = `<h2>Question ${counter} of 10</h2>`;
-
+    document.getElementById('currentAntelope').innerHTML = `<h1 class="quiz-text">Antelope #${counter} is...</h1>`;
+   
     //remove any empty elements on each reiteration of function
     antelope = antelope.filter(item => item)
 
@@ -61,12 +61,12 @@ function optionClick(clicked_id) {
         completeCorrect[counter-1] = answers[correct];
 
     } else { // incorrect answer clicked
-        k.style.backgroundColor = 'red';
+        k.style.backgroundColor = 'crimson';
         completeIncorrect[counter-1] = answers[correct];
     }
     
     //display correct answer above image
-    document.getElementById('currentAntelope').innerHTML = `<h1 class="quiz-text">Correct Answer: ${answers[correct].type}!</h1>`;
+    document.getElementById('currentAntelope').innerHTML = `<h1 class="quiz-text">${answers[correct].type}!</h1>`;
 
     // disable all 'option' buttons
     const qButtons = document.getElementById("qBox").getElementsByTagName('*');
@@ -89,12 +89,12 @@ function optionClick(clicked_id) {
 
     // if 'Next Question' button clicked
     clickNext.addEventListener('click', () => {
-        if (counter < 7) {
+        if (counter < 10) {
             
             counter++;
             
             // reset 'Name that antelope' to default state
-            document.getElementById('currentAntelope').innerHTML = `<h1 class="quiz-text">Name that antelope!</h1>`;
+            document.getElementById('currentAntelope').innerHTML = `<h1 class="quiz-text"> antelope species #${counter} is:</h1>`;
             
             // reset 'option' buttons to default state
             var answersEl = document.getElementById('qBox');
