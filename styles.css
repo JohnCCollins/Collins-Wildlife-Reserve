@@ -24,9 +24,8 @@ body {
 
 .container {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
     height: auto;
     width: 95%;
     padding: 60px;
@@ -37,13 +36,10 @@ body {
     background-size: cover;
     
 }
-a {
-    color: black;  
-}
 
+a,
 a:visited {
-    color: black;
-
+    color: black;  
 }
 
 .portal {
@@ -52,7 +48,7 @@ a:visited {
     width: 99%;
     margin: 10px;
     text-align: center;
-    flex-grow: auto;
+    /* flex-grow: auto; */
     box-shadow: 5px 5px 5px black;
     display: flex;
     flex-direction: column;
@@ -65,19 +61,19 @@ a:visited {
     transform: scale(1.025);
 }
 
-.pic {
+/* .pic {
     align-items: center;
-}
-
-.gallery {
-    background-image: url(img/sable1.jpg);
-    background-size: cover;
-}
+} */
 
 .img-header {
     background: rgb(250, 132, 77);
     margin-bottom: auto;
     border-radius: 2%;
+}
+
+.gallery {
+    background-image: url(img/sable1.jpg);
+    background-size: cover;
 }
 
 .quiz-start {
@@ -93,22 +89,21 @@ a:visited {
     background-size: cover;
 }
 
-.infotext {
+/* .infotext {
     display: flex;
     order: 0;
     align-self: center;
     width: 90%;
-}
+} */
 
-p {
+/* p {
     color: darkgray;
-}
+} */
 
 .main-footer {
     height: 10vh;
     width: auto;
     margin-top: auto;
-    background-color: rgb(250, 132, 77);
     display: flex;
     justify-content: center;
 }
@@ -118,8 +113,8 @@ p {
 @media(min-width: 728px) {
    .container {      
         background-color: aliceblue;
-        flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-direction: row;
+        flex-wrap: wrap; */
         justify-content: space-evenly;
 }
 
@@ -143,9 +138,9 @@ p {
     width: 45%;
 }
 
-.infotext {
+/* .infotext {
     font-size: 1.5em;
-}
+} */
 
 }
 

@@ -1,7 +1,8 @@
 
 let html = '';
 
-for (let i = 0; i < antelope.length; i++) {
+
+for (let i = 0; i < antelope.length; i++) { // populate page with contents of 'antelope' array
     
     let species = antelope[i];
 

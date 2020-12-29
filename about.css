@@ -1,14 +1,16 @@
 
+/* CSS */
+
 * {
     box-sizing: border-box;
     text-decoration: none;
 }
 
 body {
-    background-image: linear-gradient( rgb(88, 35, 88) 30%, rgb(185, 135, 179));
     display: flex;
     flex-direction: column;
     margin: auto;
+    background-image: linear-gradient( rgb(88, 35, 88) 30%, rgb(185, 135, 179));
 }
 
 .main-header {
@@ -17,13 +19,10 @@ body {
     background-color:  rgb(250, 132, 77);
     box-shadow: 0px 5px 5px black;
     text-align: center;
-    order: -2;
-    
 }
 
 main {
-    height: fit-content;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .go-back {
@@ -33,33 +32,22 @@ main {
 
 .container {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     height: 50%;
-    width: 90%;
-    padding: 20px;
-    padding-bottom: 40px;
+    width: 80%;
     margin: auto;
-    margin-bottom: 30px;
-    background-image: url(img/pexels-taryn-elliott-5213948.jpg);
-    background-size: cover;
+    margin-top: 10px;
+    padding: 20px;
+    background-color:  rgb(250, 132, 77);
+    box-shadow: 5px 5px 5px black;
     border-radius: 10%;
-    
-}
-
-.contact {
-    
-
 }
 
 .contact-child {
-    width: 90%;
-    margin: 15px;
-    color: ivory;
-    
-
-    
+    margin: 10px;
+    width: 70%;
 }
 
 .title {
@@ -67,62 +55,61 @@ main {
 }
 
 .info {
-    color: darkgray;
-    font-size: inherit;
     margin: auto;
     margin-bottom: 30px;
     width: 70%;
-
+    color: darkgrey;
 }
+
 .main-footer {
     height: 10vh;
     width: auto;
     margin-top: auto;
-    margin-bottom: auto;
-    background-color: rgb(250, 132, 77);
     display: flex;
     justify-content: center;
 }
 
+
 /* MEDIA QUERIES */
 
-@media(min-width: 400px) {
+@media(min-width: 561px) {
+
     .container {
-        width: 70%;
+        height: 70%;
+    }
+
+    .contact-child {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
     }
 }
 
 
-main {
-    height: 85vh;
-}
-
-
-
-
-@media(min-width: 750px) {
-
-
-.container {
-    width: 600px;
-    height: 350px;
-}
-
-}
-
-
-@media(min-width: 950px) {
+@media(min-width: 850px) {
 
     main {
         margin-bottom: 40px;
     }
 
     .info {
-        font-size: 1.10rem;
+        font-size: 1.1rem;
+        
     }
 
     .container {
         height: 450px;
         width: 750px;
+        padding-bottom: 50px;
+    }
+    
+    .contact-child {
+        font-size: 1.7rem;
+    }
+
+    .title {
+        font-size: 3rem;
     }
 }
