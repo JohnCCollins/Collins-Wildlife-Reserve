@@ -1,17 +1,25 @@
 
+/* CSS */
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    
-    background-color:rgb(88, 35, 88);
     margin: auto;
-    
+    background-image: linear-gradient( rgb(88, 35, 88) 30%, rgb(185, 135, 179));
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 .head-wrap {
     display: flex;
+    margin:  0px auto;
 }
 
 .main-header {
@@ -20,9 +28,6 @@ body {
     background-color:  rgb(250, 132, 77);
     box-shadow: 0px 5px 5px black;
     text-align: center;
-    align-self: flex-start;
-    order: -2;
-    
 }
 
 .go-back {
@@ -31,45 +36,82 @@ body {
 }
 
 .container {
-    margin: 0px auto;
-    margin-top: auto;
-    margin-bottom: 20px;
-    width: 75%;
     display: flex;
-    background-color: cadetblue;
+    flex-wrap: nowrap;
     justify-content: center;
-    flex-wrap: wrap;
     flex-direction: column;
+    width: 85%;
+    margin: auto;
 }
 
 img {
     height: 25%;
-    width: 75%;
+    width: 85%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 25%;
 }
 
 .species {
+    color: ivory;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 50px;
+    
 }
 
 .bio {
-    margin:  40px;
+    margin: 40px;
+    margin-top: 20px;
+    color: ivory;
+}
+
+.main-footer {
+    height: 10vh;
+    width: auto;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
 }
 
 
+
+
 /* MEDIA QUERIES */
-/* 
-@media(min-width: 769px) {
-    body {
-        display: flex;
-        flex-flow: row wrap;
+
+@media(min-width: 768px) {
+
+    main {
+        width: 85%;
     }
 
     .container {
-        width: 200px;
-        height: 200px;
+        width: 50%;
+        height: 400px;
+        margin-bottom: 65px;  
     }
-} */
+
+    img {
+        height: 60%;
+        width: 80%;
+    }
+
+}
+
+@media(min-width: 1000px) {
+    main {
+        width: 80%;
+    }
+
+    .container {
+        width: 33%;
+        margin-bottom: 70px;
+    }
+
+    img {
+        width: 85%; 
+    }
+
+    .bio {
+        margin: 20px;
+    }
+}
