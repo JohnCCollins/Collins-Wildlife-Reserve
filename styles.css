@@ -1,4 +1,4 @@
-
+/* CSS */
 
 * {
     box-sizing: border-box;
@@ -18,23 +18,22 @@ body {
     background-color:  rgb(250, 132, 77);
     box-shadow: 0px 5px 5px black;
     text-align: center;
-    order: -2;
-    
+    padding-top: 10px;
+}
+
+main {
+    margin-bottom: 88px;
 }
 
 .container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    height: auto;
-    width: 95%;
-    padding: 60px;
     margin: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    padding: 60px;
+    background-color: rgb(88, 35, 88);
     background-image: url(img/pexels-bianca-marolla-822478.jpg);
-    background-size: cover;
-    
+    background-size: cover;  
 }
 
 a,
@@ -43,30 +42,24 @@ a:visited {
 }
 
 .portal {
-    background-color: rgb(250, 132, 77);
-    height: 30%;
-    width: 99%;
-    margin: 10px;
-    text-align: center;
-    /* flex-grow: auto; */
-    box-shadow: 5px 5px 5px black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10%;
+    background-color: rgb(250, 132, 77);
+    margin: 10px;
     margin-bottom: 30px;
+    width: 99%;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10%;
 }
 
 .portal:hover {
     transform: scale(1.025);
 }
 
-/* .pic {
-    align-items: center;
-} */
-
 .img-header {
-    background: rgb(250, 132, 77);
+    background-color: rgb(250, 132, 77);
     margin-bottom: auto;
     border-radius: 2%;
 }
@@ -77,28 +70,14 @@ a:visited {
 }
 
 .quiz-start {
-    order: 1;
-    flex-grow: 60%;
     background-image: url(img/bongo1.jpg);
     background-size: cover;
 }
 
-.visit {
-    order: 2;
+.about {
     background-image: url(img/pexels-oleg-magni-861339.jpg);
     background-size: cover;
 }
-
-/* .infotext {
-    display: flex;
-    order: 0;
-    align-self: center;
-    width: 90%;
-} */
-
-/* p {
-    color: darkgray;
-} */
 
 .main-footer {
     height: 10vh;
@@ -111,67 +90,37 @@ a:visited {
 /* Media Queries */
 
 @media(min-width: 728px) {
-   .container {      
-        background-color: aliceblue;
-        /* flex-direction: row;
-        flex-wrap: wrap; */
-        justify-content: space-evenly;
-}
 
-.portal {
-    height: 400px;
-    width: 350px;
-}
+    main {
+        margin-bottom: 20px;
+    }    
 
-.gallery {
-    align-self: flex-start;
-    width: 45%;
-}
-
-.visit {
-    align-self: flex-end;
-    width: 95%;
-}
-
-.quiz-start {
-    flex-grow: 60%;
-    width: 45%;
-}
-
-/* .infotext {
-    font-size: 1.5em;
-} */
-
-}
-
-@media(min-width: 1090px) {
-    .container {
-        background-color: steelblue;
-        flex-direction: row;
-        flex: nowrap;
+    .container {      
         justify-content: space-evenly;
     }
 
     .portal {
-        height: 60vh;
-        width: max-content;
-        
-        
-        
+        height: 400px;
     }
+
     .quiz-start {
-        width: 30%;
-        position: relative;
-        transform: inherit;
+        width: 45%;
     }
 
     .gallery {
-        width: 30%;
+        width: 45%;
     }
 
-    .visit {
-        width: 30%;
+    .about {
+        width: 95%;
     }
 
+}
 
+@media(min-width: 1090px) {
+    
+    .portal {
+        height: 60vh; 
+        width: 30%;
+    }
 }
