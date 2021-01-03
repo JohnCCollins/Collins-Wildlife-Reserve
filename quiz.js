@@ -17,7 +17,9 @@ const answers = [];
 // display main contents of page
 function run() {
 
-    // display through the quiz
+    // display question #s throughout quiz
+    document.querySelector('.counter').innerHTML = `<p>Question ${counter} of 10</p>`;
+
     document.getElementById('currentAntelope').innerHTML = `<h1 class="quiz-text">Antelope #${counter} is...</h1>`;
    
     //remove any empty elements on each reiteration of function
@@ -36,7 +38,8 @@ function run() {
         antelope.splice(j, 1);
 
         //populate multiple choice option with chosen species name
-        document.querySelector('.options').innerHTML += `<button class="answer" id="${opt[i]}" type="submit" onclick="optionClick(this.id)"><h3 class="names">${answers[i].type}</h3></button>`;
+        document.querySelector('.options').innerHTML += `<button class="answer" id="${opt[i]}" type="submit" 
+        onclick="optionClick(this.id)"><h3 class="names">${answers[i].type}</h3></button>`;
 
     };
 
@@ -84,7 +87,7 @@ function optionClick(clicked_id) {
     }
 
     //display 'Next Question' button
-    document.getElementById('qBox').innerHTML += '<button id="nextButton"><h1 class="next">Next Question</h1></button>';
+    document.getElementById('qBox').innerHTML += '<button id="nextButton"><h1 class="next">Continue</h1></button>';
     const clickNext = document.getElementById('nextButton');
 
     // if 'Next Question' button clicked
@@ -98,8 +101,7 @@ function optionClick(clicked_id) {
             
             // reset 'option' buttons to default state
             var answersEl = document.getElementById('qBox');
-            
-            while(answersEl.firstChild) {
+            while ( answersEl.firstChild ) {
                 answersEl.removeChild(answersEl.firstChild);
             }
             
@@ -115,7 +117,7 @@ function optionClick(clicked_id) {
             completeIncorrect = completeIncorrect.filter(item => item)
             
             // display quiz results
-            alert(`You guessed ${completeCorrect.length} antelope correctly, and ${completeIncorrect.length} incorrectly. Thanks for playing!`);
+            alert(`You guessed ${completeCorrect.length} antelope correctly, and ${completeIncorrect.length} incorrectly. Check out the Gallery for more info on the species!`);
         };
     });  
 
