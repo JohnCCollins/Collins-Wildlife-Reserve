@@ -13,8 +13,9 @@ body {
     background-image: linear-gradient(rgb(88, 35, 88) 30%, transparent), 
     url(img/pexels-bianca-marolla-822478.jpg);
     background-size: 2000px;
-}
 
+}
+/* properties for elements in header */
 .main-header {
     display: flex;
     flex-flow: row wrap;
@@ -36,6 +37,7 @@ body {
     height: 0px;
     width: 30%;
     color: aliceblue;
+    text-shadow: 1px 1px 1px black;
 }
 
 .lA {
@@ -57,9 +59,9 @@ a:hover {
 .counter {
     width: 100%;
     margin-top: 10px;
-    color: aliceblue;
 }
 
+/* properties for elements in main */
 .image-wrap {
     width: 75%;
     height: 200px;
@@ -123,11 +125,10 @@ a:hover {
     color: black;
 }
 
+/* footer */
 .main-footer {
     display: flex;
     justify-content: center;
-    margin-bottom: auto;
-    width: auto;
     height: 10vh;
     color: darkgray;
 }
@@ -137,6 +138,7 @@ a:hover {
 
 @media(min-width: 400px) {
 
+    /* main */
     .image-wrap {
         width: 310px; 
     }
@@ -148,6 +150,7 @@ a:hover {
 
 @media(min-width: 700px) {
     
+    /* header */
     .lA {
         width: 85%;
         text-align: left;
@@ -164,6 +167,7 @@ a:hover {
         text-align: right;
     }
     
+    /* main */
     .image-wrap {
         width: 400px;
         height: 300px;
@@ -180,6 +184,7 @@ a:hover {
 
 @media(min-width: 1000px) {
   
+    /* main */
     .image-wrap {
         width: 450px;
         height: 350px;

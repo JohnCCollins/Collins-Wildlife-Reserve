@@ -10,10 +10,18 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    background-image: linear-gradient( rgb(88, 35, 88) 30%, rgb(185, 135, 179));
+    background-color: rgb(88, 35, 88);
+    background-image: linear-gradient( rgb(88, 35, 88) 10%, transparent),
+    url(img/pexels-oleg-magni-861339.jpg);
+    background-size: 2000px;  
 }
 
+/* properties for elements in header */
 .main-header {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    padding-top: 3px;
     height: 100px;
     width: 100%;
     background-color:  rgb(250, 132, 77);
@@ -21,87 +29,128 @@ body {
     text-align: center;
 }
 
-main {
-    margin-bottom: 50px;
+.title {
+    width: 100%;
 }
 
-.go-back {
-    margin-top: auto;  
+.go {
+    margin: auto;
+    height: 0px;
+    width: 30%;
     color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+.lA {
+    text-align: left;
+}
+
+.lC {
+    text-align: right;
+}
+
+a:visited {
+    color: aliceblue;
+}
+
+a:hover {
+    color: rgb(88, 35, 88);    
+}
+
+/* properties for elements in main */
+.info {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 70%;
+    color: lightgrey;
 }
 
 .container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 80%;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 25px;  
     padding: 20px;
-    background-color:  rgb(250, 132, 77);
+    width: 80%;
+    background-image: linear-gradient(rgb(250, 132, 77), 70%, rgb(252, 233, 181));
+    background-size: cover;
     box-shadow: 5px 5px 5px black;
     border-radius: 10%;
 }
 
+.contactUs {
+    text-align: center; 
+}
+
 .contact-child {
     margin: 10px;
-    width: 70%;
+    width: 70%;  
 }
 
-.title {
-    text-align: center;
+.email {
+    color:  rgb(0, 118, 173);
 }
 
-.info {
-    margin: auto;
-    margin-bottom: 30px;
-    width: 70%;
-    color: darkgrey;
-}
-
+/* footer */
 .main-footer {
-    height: 10vh;
-    width: auto;
-    margin-top: auto;
     display: flex;
     justify-content: center;
+    height: 10vh; 
 }
 
 
 /* MEDIA QUERIES */
 
-@media(min-width: 561px) {
+@media(min-width: 600px) {
 
+    /* header */
+    .lA {
+        width: 85%;
+        padding-left: 15px;
+    }
+
+    .lB,
+    .lC {
+        width: 7.5%;
+    }
+
+    .lC {
+        padding-right: 15px;
+    }
+
+    /* main */
     .container {
-        height: 70%;
+        width: 500px;
+        height: 300px;
+        margin-bottom: 65px;  
     }
 
     .contact-child {
         font-size: 1.5rem;
     }
 
-    .title {
+    .contactUs  {
         font-size: 2.5rem;
     }
 }
 
 
-@media(min-width: 850px) {
+@media(min-width: 1020px) {
 
+    /* main */
     main {
         margin-bottom: 40px;
     }
 
     .info {
         font-size: 1.1rem;
-        
     }
 
     .container {
-        height: 450px;
-        width: 750px;
+        height: 350px;
+        width: 550px;
         padding-bottom: 50px;
     }
     
@@ -109,7 +158,7 @@ main {
         font-size: 1.7rem;
     }
 
-    .title {
+    .contactUs  {
         font-size: 3rem;
     }
 }

@@ -3,26 +3,24 @@
 
 * {
     box-sizing: border-box;
+    text-decoration: none;  
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    background-image: linear-gradient( rgb(88, 35, 88) 30%, rgb(185, 135, 179));
+    background-color: rgb(88, 35, 88);
+    background-image: url(img/pexels-bianca-marolla-822478.jpg);
+    background-size: 4000px;
 }
 
-main {
+/* properties for elements in header */
+.main-header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: auto;
-}
-
-.head-wrap {
-    display: flex;
-    margin:  0px auto;
-}
-
-.main-header {
+    margin-bottom: 20px;
+    padding-top: 3px;
     height: 100px;
     width: 100%;
     background-color:  rgb(250, 132, 77);
@@ -30,9 +28,41 @@ main {
     text-align: center;
 }
 
-.go-back {
-    margin-top: auto;  
-    color: darkgrey;
+.title {
+    width: 100%;
+}
+
+.go {
+    margin: auto;
+    height: 0px;
+    width: 30%;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+.lA {
+    text-align: left;
+}
+
+.lC {
+    text-align: right;
+}
+
+a:visited {
+    color: aliceblue;
+}
+
+a:hover {
+    color: rgb(88, 35, 88);    
+}
+
+/* properties for elements in main */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    text-shadow: 1px 1px 1px black;
 }
 
 .container {
@@ -50,36 +80,52 @@ img {
     margin: auto;
     margin-top: 10px;
     border-radius: 25%;
+    box-shadow: 5px 5px 5px black;
 }
 
 .species {
-    color: ivory;
+    color: aliceblue;
     margin: auto;
-    margin-top: 50px;
-    
+    margin-top: 50px;  
 }
 
 .bio {
     margin: 40px;
     margin-top: 20px;
-    color: ivory;
+    color: lightgray;
 }
 
+/* footer */
 .main-footer {
-    height: 10vh;
-    width: auto;
-    margin-top: auto;
     display: flex;
     justify-content: center;
+    height: 10vh;
+    color: darkgray;
 }
-
-
 
 
 /* MEDIA QUERIES */
 
 @media(min-width: 768px) {
+    
+    /* header */
+    .lA {
+        width: 85%;
+        text-align: left;
+        padding-left: 15px;
+    }
 
+    .lB,
+    .lC {
+        width: 7.5%;
+    }
+
+    .lC {
+        padding-right: 15px;
+        text-align: right;
+    }
+    
+    /* main */
     main {
         width: 85%;
     }
@@ -98,6 +144,8 @@ img {
 }
 
 @media(min-width: 1000px) {
+   
+    /* main */
     main {
         width: 80%;
     }
