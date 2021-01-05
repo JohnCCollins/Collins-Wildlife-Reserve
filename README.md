@@ -1,7 +1,7 @@
 
 <h1>Wildlife-Reserve</h1>
 
-<h2>Description</h2>
+<h2>Description:</h2>
 A mock-website for a wildlife reserve, populated with various species of antelope. 
 From the homepage, you can visit the Gallery of Species, the About page, and the site's main feature, the Antelope Quiz, in ou are shown an image of a random antelope species and are prompted to select the correct name for the pictured species from four onscreen options. After you make your guess, the page will display the correct answer. Clicking 'Continue' will take you to the next question. After ten questions, the quiz will end, and you will receive an alert telling you how you did.
 
